@@ -1,3 +1,5 @@
+from nadine.settings.base import *
+
 import os
 import datetime
 
@@ -9,7 +11,7 @@ DEBUG = True
 
 # Admins
 ADMINS = (
-    ('YOU', 'you@yourdomain.com'),
+    ('admin', 'gbottaro@nacionservicios.com.ar'),
 )
 MANAGERS = ADMINS
 SERVER_EMAIL = 'nadine@officenomads.com'
@@ -19,11 +21,14 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'nadinedb',
         'USER': 'postgres',
-        #'PASSWORD': 'password',
+        'PASSWORD': 'somepassword',
         'HOST': 'db',
         'PORT': 5432,
      }
 }
+
+COUNTRY = "AR"
+TIME_ZONE = "America/Argentina/Buenos_Aires"
 
 STATIC_ROOT = "/webapp/static"
 MEDIA_ROOT = "/webapp/media"

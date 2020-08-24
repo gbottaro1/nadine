@@ -6,6 +6,9 @@ services:
       dockerfile: Dockerfile-postgres
     ports:
       - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=somepassword
+      - POSTGRES_HOST_AUTH_METHOD=trust
   django:
     build:
       context: .
@@ -16,3 +19,5 @@ services:
       - db
     links:
       - db
+    environment:
+      - POSTGRES_PASSWORD=somepassword
