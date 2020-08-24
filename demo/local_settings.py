@@ -11,7 +11,7 @@ DEBUG = True
 
 # Admins
 ADMINS = (
-    ('admin', 'gbottaro@nacionservicios.com.ar'),
+    ('admin', 'admin@nacionservicios.com.ar'),
 )
 MANAGERS = ADMINS
 SERVER_EMAIL = 'nadine@officenomads.com'
