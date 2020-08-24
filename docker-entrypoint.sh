@@ -19,6 +19,6 @@ python manage.py migrate                  # Apply database migrations
 #    "$@"
 
 #https://stackoverflow.com/questions/6244382/how-to-automate-createsuperuser-on-django
-python manage.py shell -c "from django.contrib.auth.models import User; User.objects.create_superuser('admin', 'gbottaro@nacionservicios.com.ar', 'admin')"
+python manage.py shell -c "from django.contrib.auth.models import User; User.objects.create_superuser('admin', 'admin@nacionservicios.com.ar', 'admin')"
 
 python manage.py runserver 0.0.0.0:8000
