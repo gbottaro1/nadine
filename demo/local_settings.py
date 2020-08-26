@@ -72,5 +72,10 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_SUBJECT_PREFIX = "[COWORKING] "  # or None if you want no subject prefix
 
+# Mailgun Settings
+#MAILGUN_API_KEY = "4d640632-e16915731"
+#MAILGUN_DOMAIN = "sandbox59b58afa8e5d4d83b180abe02efa6d2d1.mailgun.org"
+#MAILGUN_DEBUG = True
+
 TEAM_EMAIL_ADDRESS = "team@officenomads.com"
 TEAM_MEMBERSHIP_PLAN = "ON Team"
