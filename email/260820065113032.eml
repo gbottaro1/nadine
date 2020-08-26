@@ -1,0 +1,60 @@
+        Wed, 26 Aug 2020 06:51:12 +0000 (GMT)
+Content-Type: multipart/alternative;
+ boundary="===============3230758850061582493=="
+MIME-Version: 1.0
+Subject: [Nadine] Please Verify Your Email Address
+From: nadine@fake.com
+To: nadine@fake.com
+Date: Wed, 26 Aug 2020 06:51:12 -0000
+Message-ID: <159842467289.282.7329154024725412165@75900a9d95f9>
+
+--===============3230758850061582493==
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+
+Please take a moment to verify your e-mail address.
+
+A new e-mail address has been associated with your account at example.com.
+Please copy and paste the link below into your browser's address box to verify your new address.
+
+https://example.com/email/verify/2/?verif_key=5659ad1d9a1163fa4fc73b6e3d716eb038e5bb0f
+
+Thanks!
+The example.com Team
+
+--===============3230758850061582493==
+Content-Type: text/html; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "EmailMessage",
+  "potentialAction": {
+    "@type": "ConfirmAction",
+    "name": "Verify Email",
+    "handler": {
+      "@type": "HttpActionHandler",
+      "url": "https://example.com/email/verify/2/?verif_key=5659ad1d9a1163fa4fc73b6e3d716eb038e5bb0f"
+    }
+  },
+  "description": "Verify your email address for example.com."
+}
+</script>
+
+<p>Please verify your e-mail address.</p>
+
+<p>A new e-mail address has been associated with your account at example.com. Please click the link below to verify your new address.</p>
+
+<h3>Your Verification Key: <a href="https://example.com/email/verify/2/?verif_key=5659ad1d9a1163fa4fc73b6e3d716eb038e5bb0f">5659ad1d9a1163fa4fc73b6e3d716eb038e5bb0f</a></h3>
+
+<p>
+Thanks!<br>
+The example.com Team
+</p>
+
+--===============3230758850061582493==--

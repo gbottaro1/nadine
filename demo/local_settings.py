@@ -11,7 +11,7 @@ DEBUG = True
 
 # Admins
 ADMINS = (
-    ('admin', 'admin@nacionservicios.com.ar'),
+    ('admin', 'admin@fake.com'),
 )
 MANAGERS = ADMINS
 SERVER_EMAIL = 'nadine@officenomads.com'
@@ -64,18 +64,18 @@ ARPWATCH_SNMP_SERVER = '192.168.1.1'
 ARPWATCH_SNMP_COMMUNITY = 'yourcommunitystring'
 ARPWATCH_NETWORK_PREFIX = '192.168.'
 
-DEFAULT_FROM_EMAIL = "something@example.com"
-EMAIL_HOST = "smtp.example.com"
-EMAIL_HOST_PASSWORD = "password"
-EMAIL_HOST_USER = "username"
-EMAIL_USE_TLS = True
-EMAIL_PORT = 587
-EMAIL_SUBJECT_PREFIX = "[COWORKING] "  # or None if you want no subject prefix
+DEFAULT_FROM_EMAIL = "nadine@fake.com"
+EMAIL_HOST = "fakesmtp"
+#EMAIL_HOST_PASSWORD = "password"
+#EMAIL_HOST_USER = "username"
+#EMAIL_USE_TLS = True
+EMAIL_PORT = 25
+#EMAIL_SUBJECT_PREFIX = "[COWORKING] "  # or None if you want no subject prefix
 
 # Mailgun Settings
 #MAILGUN_API_KEY = "4d640632-e16915731"
 #MAILGUN_DOMAIN = "sandbox59b58afa8e5d4d83b180abe02efa6d2d1.mailgun.org"
 #MAILGUN_DEBUG = True
 
-TEAM_EMAIL_ADDRESS = "team@officenomads.com"
+TEAM_EMAIL_ADDRESS = "team@fake.com"
 TEAM_MEMBERSHIP_PLAN = "ON Team"

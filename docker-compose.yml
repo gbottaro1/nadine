@@ -1,5 +1,13 @@
 version: '2'
 services:
+  fakesmtp:
+    build:
+      context: .
+      dockerfile: Dockerfile-fakesmtp
+    ports:
+      - "1025:25"  
+    volumes:
+      - ./email:/var/mail
   db:
     build:
       context: .
@@ -17,7 +25,9 @@ services:
       - "8000:8000"
     depends_on:
       - db
+      - fakesmtp
     links:
       - db
+      - fakesmtp
     environment:
       - POSTGRES_PASSWORD=somepassword
