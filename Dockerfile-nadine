@@ -31,7 +31,7 @@ RUN apt-get update \
     && apt-get -y dist-upgrade \
     && apt-get install -y libjpeg-dev gunicorn postgresql-client 
 # Proxy para git
-RUN	git config --global http.sslVerify false \
+#RUN	git config --global http.sslVerify false \
 #	&& git config --global https.sslVerify false \
 #	&& git config --global http.proxy http://172.29.66.25:14100 \
 #	&& git config --global https.proxy http://172.29.66.25:14100 \
@@ -60,14 +60,13 @@ COPY $DOCKYARD_SRC $DOCKYARD_SRVPROJ
 # Install Python dependencies
 RUN pip install --upgrade pip
 RUN pip install -r $DOCKYARD_SRVPROJ/requirements.txt
-# Versión con Proxy para pip
-#RUN pip install --proxy http://172.29.66.25:13700 --upgrade pip
-#RUN pip install --proxy http://172.29.66.25:13700 -r $DOCKYARD_SRVPROJ/requirements.txt
+# VersiÃ³n con Proxy para pip
+#RUN pip install --proxy http://172.29.66.25:14100 --upgrade pip
+#RUN pip install --proxy http://172.29.66.25:14100 -r $DOCKYARD_SRVPROJ/requirements.txt
 
 # Install the demo data
 WORKDIR $DOCKYARD_SRVPROJ
 COPY $DOCKYARD_SRC/demo/local_settings.py $DOCKYARD_SRVPROJ/nadine/settings
-#COPY $DOCKYARD_SRC/demo/local_settings.py.GB $DOCKYARD_SRVPROJ/nadine/settings/local_settings.py
 #RUN /etc/init.d/postgresql start \
 #  && ./manage.py restore_backup demo/demo_database.tar
 
