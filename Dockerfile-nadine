@@ -20,22 +20,10 @@ ENV DOCKYARD_SRVHOME=/webapp
 # Directory in container for project source files
 ENV DOCKYARD_SRVPROJ=/webapp/nadine
 
-# Proxy para apt-get
-#ENV HTTP_PROXY http://172.29.66.25:14100
-#ENV HTTPS_PROXY http://172.29.66.25:14100
-#ENV http_proxy http://172.29.66.25:14100
-#ENV https_proxy http://172.29.66.25:14100
-
 # Update the default application repository sources list
 RUN apt-get update \
     && apt-get -y dist-upgrade \
     && apt-get install -y libjpeg-dev gunicorn postgresql-client 
-# Proxy para git
-#RUN	git config --global http.sslVerify false \
-#	&& git config --global https.sslVerify false \
-#	&& git config --global http.proxy http://172.29.66.25:14100 \
-#	&& git config --global https.proxy http://172.29.66.25:14100 \
-#	&& git config --global http.proxyAuthMethod 'basic'
 #RUN apt-get -y autoremove
 
 # Configure Postgresql
@@ -60,9 +48,6 @@ COPY $DOCKYARD_SRC $DOCKYARD_SRVPROJ
 # Install Python dependencies
 RUN pip install --upgrade pip
 RUN pip install -r $DOCKYARD_SRVPROJ/requirements.txt
-# Versión con Proxy para pip
-#RUN pip install --proxy http://172.29.66.25:14100 --upgrade pip
-#RUN pip install --proxy http://172.29.66.25:14100 -r $DOCKYARD_SRVPROJ/requirements.txt
 
 # Install the demo data
 WORKDIR $DOCKYARD_SRVPROJ
