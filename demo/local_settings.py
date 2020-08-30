@@ -84,4 +84,4 @@ TEAM_MEMBERSHIP_PLAN = "ON Team"
 #ni.ifaddresses('eth0')
 #ip = ni.ifaddresses('eth0')[AF_INET][0]['addr']
 #ALLOWED_HOSTS = [ip, 'localhost', '127.0.0.1']
-ALLOWED_HOSTS = [*]
+ALLOWED_HOSTS = ['*']
