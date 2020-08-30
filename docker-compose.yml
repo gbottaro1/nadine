@@ -33,4 +33,4 @@ services:
       - fakesmtp
     environment:
       - POSTGRES_PASSWORD=somepassword
-    image: gbottaro/nadine-django:1.0.2
+    image: gbottaro/nadine-django:1.0.3
