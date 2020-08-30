@@ -1,5 +1,5 @@
 from nadine.settings.base import *
-from socket import *
+#from socket import *
 import os
 import datetime
 
@@ -80,7 +80,8 @@ EMAIL_PORT = 25
 TEAM_EMAIL_ADDRESS = "team@fake.com"
 TEAM_MEMBERSHIP_PLAN = "ON Team"
 
-import netifaces as ni
-ni.ifaddresses('eth0')
-ip = ni.ifaddresses('eth0')[AF_INET][0]['addr']
-ALLOWED_HOSTS = [ip, 'localhost', '127.0.0.1']
+#import netifaces as ni
+#ni.ifaddresses('eth0')
+#ip = ni.ifaddresses('eth0')[AF_INET][0]['addr']
+#ALLOWED_HOSTS = [ip, 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = [*]

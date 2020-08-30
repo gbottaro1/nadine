@@ -8,7 +8,7 @@ services:
       - "1025:25"  
     volumes:
       - ./email:/var/mail
-    image: gbottaro/nadine-fakesmtp:1.0
+    image: gbottaro/nadine-fakesmtp:1.0.1
   db:
     build:
       context: .
@@ -18,7 +18,7 @@ services:
     environment:
       - POSTGRES_PASSWORD=somepassword
       - POSTGRES_HOST_AUTH_METHOD=trust
-    image: gbottaro/nadine-postgresql:1.0
+    image: gbottaro/nadine-postgresql:1.0.1
   django:
     build:
       context: .
@@ -33,4 +33,4 @@ services:
       - fakesmtp
     environment:
       - POSTGRES_PASSWORD=somepassword
-    image: gbottaro/nadine-django:1.0
+    image: gbottaro/nadine-django:1.0.2
